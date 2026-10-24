@@ -1,3 +1,48 @@
+import type { TeamMember } from "@/components/blocks/team-showcase";
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    id: "moon-bmda",
+    name: "Md Farhan Mahmud Moon",
+    role: "Business and Management Development Advisor",
+    imageURL: "/moon.webp",
+    socialLinks: {
+      LinkedIn: "https://www.linkedin.com/in/1farhanmahmud/",
+      X: "https://x.com/1farhanmahmud",
+    },
+  },
+  {
+    id: "sneha-ceo",
+    name: "Sneha Salam",
+    role: "Founder & Chief Executive Officer",
+    imageURL: "/sneha.webp",
+    socialLinks: {
+      LinkedIn: "https://www.linkedin.com/in/sneha-salam/",
+      website: "https://snehasalam.com",
+      X: "https://x.com/SalamSneha",
+    },
+  },
+  {
+    id: "ashik-clo",
+    name: "Md Izaz Uddin Ashik",
+    role: "Chief Legal Officer",
+    imageURL: "/ashik.webp",
+    socialLinks: {
+      LinkedIn: "https://www.linkedin.com/in/md-izaz-uddin-258788121/",
+    },
+  },
+  {
+    id: "ratul-cto",
+    name: "Rakibul Hasan Ratul",
+    role: "Chief Technology Officer",
+    imageURL: "/ratul.webp",
+    socialLinks: {
+      LinkedIn: "https://www.linkedin.com/in/rhasanratul",
+      X: "https://x.com/RHasanRatul",
+    },
+  },
+];
+
 type QuestionnaireItems = { question: string; answer: string }[];
 type FAQItems = { category: string; questionnaire: QuestionnaireItems }[];
 

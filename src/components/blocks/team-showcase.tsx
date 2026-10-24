@@ -14,70 +14,11 @@ export interface TeamMember {
   };
 }
 
-const DEFAULT_MEMBERS: TeamMember[] = [
-  {
-    id: "1",
-    name: "Md Farhan Mahmud Moon",
-    role: "Business and Management Development Advisor",
-    imageURL: "/moon.webp",
-    socialLinks: {
-      LinkedIn: "https://www.linkedin.com/in/1farhanmahmud/",
-      X: "https://x.com/1farhanmahmud",
-    },
-  },
-  {
-    id: "2",
-    name: "Sneha Salam",
-    role: "Founder & Chief Executive Officer",
-    imageURL: "/sneha.webp",
-    socialLinks: {
-      LinkedIn: "https://www.linkedin.com/in/sneha-salam/",
-      website: "https://snehasalam.com",
-      X: "https://x.com/SalamSneha",
-    },
-  },
-  {
-    id: "3",
-    name: "MD Ferdous Hassan",
-    role: "Chief Communications Officer",
-    imageURL: "/snigdho.png",
-    socialLinks: { LinkedIn: "https://www.linkedin.com/in/ferdoushassan280/" },
-  },
-  {
-    id: "4",
-    name: "Nazifa Zafrin Ahona",
-    role: "Chief Operating Officer",
-    imageURL: "/ahona.webp",
-    socialLinks: { LinkedIn: "https://www.linkedin.com/in/nazifazafrin/" },
-  },
-  {
-    id: "5",
-    name: "Md Izaz Uddin Ashik",
-    role: "Chief Legal Officer",
-    imageURL: "/ashik.webp",
-    socialLinks: {
-      LinkedIn: "https://www.linkedin.com/in/md-izaz-uddin-258788121/",
-    },
-  },
-  {
-    id: "6",
-    name: "Md Rakibul Hasan Ratul",
-    role: "Chief Technology Officer",
-    imageURL: "/ratul.webp",
-    socialLinks: {
-      LinkedIn: "https://www.linkedin.com/in/rhasanratul",
-      X: "https://x.com/RHasanRatul",
-    },
-  },
-];
-
 interface TeamShowcaseProps {
-  members?: TeamMember[];
+  members: TeamMember[];
 }
 
-export function TeamShowcaseMobile({
-  members = DEFAULT_MEMBERS,
-}: TeamShowcaseProps) {
+function TeamShowcaseMobile({ members }: TeamShowcaseProps) {
   return (
     <div className="sm:hidden flex flex-col justify-center items-center gap-16">
       {members.map((member) => (
@@ -142,14 +83,11 @@ export function TeamShowcaseMobile({
   );
 }
 
-export function TeamShowcaseDesktop({
-  members = DEFAULT_MEMBERS,
-}: TeamShowcaseProps) {
+function TeamShowcaseDesktop({ members }: TeamShowcaseProps) {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-  const col1 = members.filter((_, i) => i % 3 === 0);
-  const col2 = members.filter((_, i) => i % 3 === 1);
-  const col3 = members.filter((_, i) => i % 3 === 2);
+  const col1 = members.filter((_, i) => i % 2 === 0);
+  const col2 = members.filter((_, i) => i % 2 !== 0);
 
   return (
     <div className="max-sm:hidden flex flex-col md:flex-row items-start gap-8 md:gap-10 lg:gap-6 select-none w-full max-w-4xl mx-auto py-8 px-4 md:px-6 font-sans">
@@ -168,7 +106,9 @@ export function TeamShowcaseDesktop({
           ))}
         </div>
 
-        {/* Column 2 */}
+        {/* Column 2
+
+
         <div className="flex flex-col gap-2 mt-12 sm:mt-14 md:mt-17">
           {col2.map((member) => (
             <PhotoCard
@@ -181,9 +121,11 @@ export function TeamShowcaseDesktop({
           ))}
         </div>
 
+          */}
+
         {/* Column 3 */}
         <div className="flex flex-col gap-2 mt-5.5 sm:mt-6.5 md:mt-8">
-          {col3.map((member) => (
+          {col2.map((member) => (
             <PhotoCard
               key={member.id}
               member={member}
@@ -341,5 +283,14 @@ function MemberRow({
         {member.role}
       </p>
     </div>
+  );
+}
+
+export function TeamShowcase({ members }: TeamShowcaseProps) {
+  return (
+    <>
+      <TeamShowcaseDesktop members={members} />
+      <TeamShowcaseMobile members={members} />
+    </>
   );
 }

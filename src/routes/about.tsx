@@ -1,10 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  TeamShowcaseDesktop,
-  TeamShowcaseMobile,
-} from "@/components/blocks/team-showcase";
+import { TeamShowcase } from "@/components/blocks/team-showcase";
 import AnimatedButton from "@/components/ui/animated-button";
 import { Quoted } from "@/components/ui/quoted";
+import { TEAM_MEMBERS } from "@/constants";
 
 export const Route = createFileRoute("/about")({
   component: RouteComponent,
@@ -100,8 +98,7 @@ function RouteComponent() {
         <h1 className="text-center text-accent max-sm:text-2xl">
           Meet Our Core Members
         </h1>
-        <TeamShowcaseDesktop />
-        <TeamShowcaseMobile />
+        <TeamShowcase members={TEAM_MEMBERS} />
       </section>
 
       {/*cta*/}
