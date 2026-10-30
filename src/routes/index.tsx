@@ -58,22 +58,20 @@ function Home() {
         <div className="bg-linear-to-t from-background via-background/50 via-30% to-transparent h-full p-6">
           <div className="max-w-3xl h-full flex flex-col items-center justify-center mx-auto gap-6">
             <img
-              src="https://tech.docufybd.com/docufy-logo.png"
+              src="https://docufybd.com/docufy-fiscal.png"
               alt="Docufy Logo"
-              className="h-20"
+              className="h-36"
             />
-            <h1 className="uppercase font-serif lg:text-5xl text-primary">
+            <h1 className="uppercase font-serif lg:text-4xl">
               One Less Thing to Worry
             </h1>
             <p className="text-xl text-secondary">
-              Whether you need help filing on time, organizing records,
-              preparing for a return, or dealing with a tax issue that needs
-              attention, Docufy Fiscal gives you straightforward guidance,
-              careful support, and a clear process so tax work becomes one less
-              thing to worry about.
+              Clear, reliable tax support for filing, record organization,
+              return preparation, and tax issues, so you can move forward with
+              confidence.
             </p>
             <div className="flex gap-6 max-sm:flex-col justify-center items-center w-full">
-              <AnimatedButton>
+              <AnimatedButton variant="accent">
                 <a
                   href="https://calendly.com/docufy-bd/30min"
                   target="_blank"
@@ -97,36 +95,8 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="min-h-[90vh] max-w-6xl px-6 py-30 mx-auto gap-8">
-        <div className="sm:grid flex flex-col-reverse h-full items-stretch gap-4 sm:grid-cols-3 *:border-secondary">
-          <div
-            id="message"
-            className="col-span-2 flex h-full flex-col items-center justify-center gap-6 sm:border bg-card/40 p-6"
-          >
-            <h1 className="lg:text-6xl max-sm:text-xl text-wrap font-serif uppercase text-primary">
-              Tax work does not need to sit on your shoulders.
-            </h1>
-            <p className="sm:text-xl text-secondary">
-              From tax filings and VAT submissions to audits, RJSC returns,
-              consultancy, dispute handling, and the day-to-day details that
-              come with staying on top of fiscal obligations, Docufy Fiscal
-              helps you stay compliant, organized, and prepared with less
-              pressure, fewer last-minute surprises, and more peace of mind.
-            </p>
-          </div>
-          <div
-            id="image"
-            className="h-full overflow-hidden sm:border bg-card/40 p-6"
-          >
-            <img
-              src="/stressed.png"
-              alt="Stressed"
-              className="block h-full w-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-      <section id="values" className="pb-12 md:pb-20">
+
+      <section id="values" className="py-30">
         <div className="mx-auto max-w-6xl space-y-8 px-6">
           <h2 className="capitalize leading-relaxed tracking-wider text-center text-primary">
             Values Why Docufy Fiscal Stands Out
@@ -172,7 +142,7 @@ function Home() {
           Fiscal.
         </p>
         <div className="flex gap-6 max-sm:flex-col w-full justify-center items-center">
-          <AnimatedButton>
+          <AnimatedButton variant="accent">
             <a
               href="https://calendly.com/docufy-bd/30min"
               target="_blank"
