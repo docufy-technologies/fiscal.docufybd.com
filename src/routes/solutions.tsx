@@ -194,13 +194,11 @@ function RouteComponent() {
   return (
     <section className="min-h-screen my-30 flex flex-col max-w-5xl mx-auto gap-8 p-6">
       <div>
-        <h1 className="text-secondary text-5xl max-sm:text-4xl uppercase">
-          Problems Docufy Fiscal Addresses
-        </h1>
+        <h1>Problems Docufy Fiscal Addresses</h1>
       </div>
 
       <div>
-        <Accordion type="multiple" className="mt-10 gap-6">
+        <Accordion type="multiple" className="mt-2 gap-6">
           {solutions.map((solution) => (
             <AccordionItem value={solution.title} key={solution.title}>
               <AccordionTrigger className="hover:no-underline hover:text-primary cursor-pointer flex justify-center items-center">
