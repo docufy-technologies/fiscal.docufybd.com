@@ -5,7 +5,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "moon-bmda",
     name: "Md Farhan Mahmud Moon",
     role: "Business and Management Development Advisor",
-    imageURL: "/moon.webp",
+    imageURL: "https://docufybd.com/moon.webp",
     socialLinks: {
       LinkedIn: "https://www.linkedin.com/in/1farhanmahmud/",
       X: "https://x.com/1farhanmahmud",
@@ -15,7 +15,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "sneha-ceo",
     name: "Sneha Salam",
     role: "Founder & Chief Executive Officer",
-    imageURL: "/sneha.webp",
+    imageURL: "https://docufybd.com/sneha.webp",
     socialLinks: {
       LinkedIn: "https://www.linkedin.com/in/sneha-salam/",
       website: "https://snehasalam.com",
@@ -26,7 +26,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "ashik-clo",
     name: "Md Izaz Uddin Ashik",
     role: "Chief Legal Officer",
-    imageURL: "/ashik.webp",
+    imageURL: "https://docufybd.com/ashik.webp",
     socialLinks: {
       LinkedIn: "https://www.linkedin.com/in/md-izaz-uddin-258788121/",
     },
@@ -35,7 +35,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "ratul-cto",
     name: "Rakibul Hasan Ratul",
     role: "Chief Technology Officer",
-    imageURL: "/ratul.webp",
+    imageURL: "https://docufybd.com/ratul.webp",
     socialLinks: {
       LinkedIn: "https://www.linkedin.com/in/rhasanratul",
       X: "https://x.com/RHasanRatul",
